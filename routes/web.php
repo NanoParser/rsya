@@ -41,3 +41,7 @@ Route::get('/', function () {
 
     return view('index', compact('domains'));
 });
+
+Route::get('/chat', function(){
+    return view('chat');
+});
