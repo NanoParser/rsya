@@ -20,6 +20,7 @@ Route::get('/', function () {
         public $title;
         public $image;
         public $text;
+        public $domain_name;
     }
 
     //return $rows;
@@ -32,10 +33,11 @@ Route::get('/', function () {
         $card->title = $item->title;
         $card->image = $item->image;
         $card->text = $item->text;
+        $card->domain_name = $item->domain_name;
 
         $domains[$item->domain_name][] = $card;
     }
-    //return $domains;
+  //  return $domains;
 
-    return view('index', compact($domains));
+    return view('index', compact('domains'));
 });
